@@ -53,6 +53,7 @@ public class payController {
     }
     @GetMapping("/updateOrderStatus")
     public void updateOrderStatus() throws Exception {
+        System.out.println("测试冲突");
         String orderId = RandomUtil.randomNumbers(10);
         Boolean aBoolean = wxPayUtils.refreshWxPay(orderId);
         if(aBoolean){
